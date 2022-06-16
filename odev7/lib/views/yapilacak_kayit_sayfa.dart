@@ -25,13 +25,10 @@ class _YapilacakKayitSayfaState extends State<YapilacakKayitSayfa> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Hero(
-                tag: "main",
-                child: TextField(
-                  controller: tfactivityName,
-                  decoration: const InputDecoration(
-                    hintText: "Yapılacak İş",
-                  ),
+              TextField(
+                controller: tfactivityName,
+                decoration: const InputDecoration(
+                  hintText: "Yapılacak İş",
                 ),
               ),
               Hero(
