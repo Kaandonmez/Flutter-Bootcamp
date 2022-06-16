@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:odev7/cubit/yapilacak_detay_cubit.dart';
 import 'package:odev7/cubit/anasayfa_cubit.dart';
-import 'package:odev7/entity/activity.dart';
+import 'package:odev7/entity/yapilacaklar.dart';
 
 class YapilacakDetaySayfa extends StatefulWidget {
   Yapilacak yapilacak;

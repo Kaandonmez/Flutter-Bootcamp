@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:odev7/entity/activity.dart';
+import 'package:odev7/entity/yapilacaklar.dart';
 import 'package:odev7/repo/yapilacakdao_rep.dart';
 
 class AnasayfaCubit extends Cubit<List<Yapilacak>> {

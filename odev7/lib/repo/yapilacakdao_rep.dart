@@ -1,4 +1,4 @@
-import 'package:odev7/entity/activity.dart';
+import 'package:odev7/entity/yapilacaklar.dart';
 import 'package:odev7/sqlite/database.dart';
 
 class YapilacakDaoRep {
