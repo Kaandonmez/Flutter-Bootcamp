@@ -10,7 +10,7 @@ class YapilacakKayitSayfa extends StatefulWidget {
 }
 
 class _YapilacakKayitSayfaState extends State<YapilacakKayitSayfa> {
-  var tfactivityName = TextEditingController();
+  var todo = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class _YapilacakKayitSayfaState extends State<YapilacakKayitSayfa> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               TextField(
-                controller: tfactivityName,
+                controller: todo,
                 decoration: const InputDecoration(
                   hintText: "Yapılacak İş",
                 ),
@@ -35,9 +35,7 @@ class _YapilacakKayitSayfaState extends State<YapilacakKayitSayfa> {
                 tag: "btnUpdate",
                 child: ElevatedButton(
                   onPressed: () {
-                    context
-                        .read<YapilacakKayitCubit>()
-                        .record(tfactivityName.text);
+                    context.read<YapilacakKayitCubit>().record(todo.text);
                   },
                   child: const Text("Kayıt"),
                 ),

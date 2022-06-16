@@ -3,7 +3,7 @@ import 'package:odev7/sqlite/database.dart';
 
 class YapilacakDaoRep {
   Future<List<Yapilacak>> tumunuAl() async {
-    var db = await DBHelper.accessToDB();
+    var db = await VeriTabaniYardimcisi.dbErisim();
     List<Map<String, dynamic>> maps =
         await db.rawQuery("SELECT * FROM yapilacaklar");
 
@@ -15,7 +15,7 @@ class YapilacakDaoRep {
   }
 
   Future<List<Yapilacak>> araYapilacaklar(String aramaKelimesi) async {
-    var db = await DBHelper.accessToDB();
+    var db = await VeriTabaniYardimcisi.dbErisim();
     List<Map<String, dynamic>> maps = await db.rawQuery(
         "SELECT * FROM yapilacaklar WHERE yapilacak_is LIKE '%$aramaKelimesi%'");
 
@@ -27,19 +27,19 @@ class YapilacakDaoRep {
   }
 
   Future<void> silYapilacaklar(int yapilacak_id) async {
-    var db = await DBHelper.accessToDB();
+    var db = await VeriTabaniYardimcisi.dbErisim();
     await db.delete("yapilacaklar",
         where: "yapilacak_id = ?", whereArgs: [yapilacak_id]);
   }
 
   Future<void> ekleYapilacaklar(String yapilacak_is) async {
-    var db = await DBHelper.accessToDB();
+    var db = await VeriTabaniYardimcisi.dbErisim();
     await db.insert("yapilacaklar", {"yapilacak_is": yapilacak_is});
   }
 
   Future<void> guncelleYapilacaklar(
       int yapilacak_id, String yapilacak_is) async {
-    var db = await DBHelper.accessToDB();
+    var db = await VeriTabaniYardimcisi.dbErisim();
     await db.update("yapilacaklar", {"yapilacak_is": yapilacak_is},
         where: "yapilacak_id = ?", whereArgs: [yapilacak_id]);
   }

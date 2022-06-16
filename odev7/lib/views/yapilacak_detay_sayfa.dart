@@ -17,7 +17,7 @@ class _YapilacakDetaySayfaState extends State<YapilacakDetaySayfa> {
   var tYapilacakIs = TextEditingController();
 
   Future<void> update(int yapilacak_id, String yapilacak_is) async {
-    print("Update activity: $yapilacak_id $yapilacak_is");
+    print(" $yapilacak_id $yapilacak_is");
   }
 
   @override

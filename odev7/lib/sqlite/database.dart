@@ -2,10 +2,10 @@ import 'dart:io';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
-class DBHelper {
+class VeriTabaniYardimcisi {
   static final String dbn = "yapilacaklar.sqlite";
 
-  static Future<Database> accessToDB() async {
+  static Future<Database> dbErisim() async {
     String dbPath = join(await getDatabasesPath(), dbn);
 
     if (File(dbPath).existsSync()) {
